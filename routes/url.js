@@ -9,7 +9,7 @@ Router.post('/shorten', async (req, res) => {
     const shortUrl = nanoid()
     const url = await urls.create({longUrl, shortUrl})
     // await url.save()
-    res.send(req.get('host')+'/'+shortUrl)
+    res.send(req.get('origin')+'/'+shortUrl)
 
 })
 Router.get('/:shortUrl', async (req, res) => {
