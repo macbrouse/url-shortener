@@ -10,6 +10,7 @@ Router.post('/shorten', async (req, res) => {
     const url = await urls.create({longUrl, shortUrl})
     // await url.save()
     res.send(shortUrl)
+
 })
 Router.get('/:shortUrl', async (req, res) => {
     const Url = await urls.findOne({'shortUrl': `${req.params.shortUrl}`})
