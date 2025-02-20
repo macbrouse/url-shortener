@@ -17,7 +17,7 @@ export function Landing(){
             return
         setLoading(true);
         try {
-            const response = await fetch ("http://url-shortener-egug.onrender.com/shorten",{
+            const response = await fetch ("https://url-shortener-egug.onrender.com/shorten",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"  
